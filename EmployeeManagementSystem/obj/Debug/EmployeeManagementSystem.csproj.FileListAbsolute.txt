@@ -14,3 +14,4 @@ C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj
 C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Forms.AddEmployee.resources
 C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Forms.Salary.resources
 C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Forms.Support.resources
+C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Forms.Admin.resources

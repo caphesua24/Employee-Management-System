@@ -41,10 +41,11 @@
 			this.main_btnDashboard = new System.Windows.Forms.Button();
 			this.lbWelcome = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.dashboard1 = new EmployeeManagementSystem.Forms.Dashboard();
 			this.addEmployee1 = new EmployeeManagementSystem.Forms.AddEmployee();
 			this.salary1 = new EmployeeManagementSystem.Forms.Salary();
 			this.support1 = new EmployeeManagementSystem.Forms.Support();
+			this.admin1 = new EmployeeManagementSystem.Forms.Admin();
+			this.dashboard1 = new EmployeeManagementSystem.Forms.Dashboard();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -126,6 +127,7 @@
 			this.main_btnAdmin.TabIndex = 7;
 			this.main_btnAdmin.Text = "ADMIN";
 			this.main_btnAdmin.UseVisualStyleBackColor = true;
+			this.main_btnAdmin.Click += new System.EventHandler(this.main_btnAdmin_Click);
 			// 
 			// main_btnLogout
 			// 
@@ -240,7 +242,6 @@
 			this.lbWelcome.Size = new System.Drawing.Size(104, 17);
 			this.lbWelcome.TabIndex = 1;
 			this.lbWelcome.Text = "Welcome, User";
-			this.lbWelcome.Click += new System.EventHandler(this.lbWelcome_Click);
 			// 
 			// pictureBox1
 			// 
@@ -252,13 +253,6 @@
 			this.pictureBox1.Size = new System.Drawing.Size(100, 100);
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
-			// 
-			// dashboard1
-			// 
-			this.dashboard1.Location = new System.Drawing.Point(225, 35);
-			this.dashboard1.Name = "dashboard1";
-			this.dashboard1.Size = new System.Drawing.Size(875, 565);
-			this.dashboard1.TabIndex = 5;
 			// 
 			// addEmployee1
 			// 
@@ -282,12 +276,27 @@
 			this.support1.Size = new System.Drawing.Size(875, 565);
 			this.support1.TabIndex = 2;
 			// 
+			// admin1
+			// 
+			this.admin1.Location = new System.Drawing.Point(225, 35);
+			this.admin1.Name = "admin1";
+			this.admin1.Size = new System.Drawing.Size(875, 565);
+			this.admin1.TabIndex = 6;
+			// 
+			// dashboard1
+			// 
+			this.dashboard1.Location = new System.Drawing.Point(225, 35);
+			this.dashboard1.Name = "dashboard1";
+			this.dashboard1.Size = new System.Drawing.Size(875, 565);
+			this.dashboard1.TabIndex = 7;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1100, 600);
 			this.Controls.Add(this.dashboard1);
+			this.Controls.Add(this.admin1);
 			this.Controls.Add(this.addEmployee1);
 			this.Controls.Add(this.salary1);
 			this.Controls.Add(this.support1);
@@ -323,7 +332,8 @@
 		private Support support1;
 		private Salary salary1;
 		private AddEmployee addEmployee1;
-		private Dashboard dashboard1;
 		private System.Windows.Forms.Button main_btnAdmin;
+		private Admin admin1;
+		private Dashboard dashboard1;
 	}
 }

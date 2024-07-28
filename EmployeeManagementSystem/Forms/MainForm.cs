@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,16 +19,13 @@ namespace EmployeeManagementSystem.Forms
 			InitializeComponent();
 		}
 
+		Connect connect = new Connect();
+
 		private void label1_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
 
-		private void lbWelcome_Click(object sender, EventArgs e)
-		{
-
-		}
-		
 		private void main_btnLogout_Click(object sender, EventArgs e)
 		{
 			DialogResult check = MessageBox.Show("Are you sure you want to logout ?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -47,6 +45,7 @@ namespace EmployeeManagementSystem.Forms
 			addEmployee1.Visible = false;
 			salary1.Visible = false;
 			support1.Visible = false;
+			admin1.Visible = false;
 		}
 
 		private void main_btnAddEmployee_Click(object sender, EventArgs e)
@@ -55,6 +54,7 @@ namespace EmployeeManagementSystem.Forms
 			addEmployee1.Visible = true;
 			salary1.Visible = false;
 			support1.Visible = false;
+			admin1.Visible = false;
 		}
 
 		private void main_btnSalary_Click(object sender, EventArgs e)
@@ -63,6 +63,7 @@ namespace EmployeeManagementSystem.Forms
 			addEmployee1.Visible = false;
 			salary1.Visible = true;
 			support1.Visible = false;
+			admin1.Visible = false;
 		}
 
 		private void main_btnHelp_Click(object sender, EventArgs e)
@@ -71,6 +72,16 @@ namespace EmployeeManagementSystem.Forms
 			addEmployee1.Visible = false;
 			salary1.Visible = false;
 			support1.Visible = true;
+			admin1.Visible = false;
+		}
+
+		private void main_btnAdmin_Click(object sender, EventArgs e)
+		{
+			dashboard1.Visible = false;
+			addEmployee1.Visible = false;
+			salary1.Visible = false;
+			support1.Visible = false;
+			admin1.Visible = true;
 		}
 	}
 }

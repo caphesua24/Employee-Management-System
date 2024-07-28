@@ -193,7 +193,7 @@ namespace EmployeeManagementSystem.Forms
 					{
 						connect.OpenConnection();
 
-						string query = "SELECT * FROM employees WHERE employee_id = '" + EmployeeID + "'";
+						string query = "SELECT * FROM employees WHERE employee_id = '" + EmployeeID + "' AND delete_date IS NULL";
 
 						int count = connect.tb(query).Rows.Count;
 
@@ -247,9 +247,7 @@ namespace EmployeeManagementSystem.Forms
 		//DELETE BUTTON
 		private void addEmployee_btnDelete_Click(object sender, EventArgs e)
 		{
-			string EmployeeID = addEmployee_txbEmployeeID.Text.Trim();
-
-			DialogResult result = MessageBox.Show("Are you sure you want to UPDATE Employee ID " + EmployeeID, "Confirmation Message", 
+			DialogResult result = MessageBox.Show("Are you sure you want to UPDATE ?", "Confirmation Message", 
 				MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 			if(result == DialogResult.Yes)
@@ -264,7 +262,9 @@ namespace EmployeeManagementSystem.Forms
 					{
 						connect.OpenConnection();
 
-						string checkID = "SELECT * FROM employees WHERE employee_id = '" + EmployeeID + "'";
+						string EmployeeID = addEmployee_txbEmployeeID.Text.Trim();	
+
+						string checkID = "SELECT * FROM employees WHERE employee_id = '" + EmployeeID + "' AND delete_date IS NULL";
 
 						int emID = connect.tb(checkID).Rows.Count;
 
@@ -277,12 +277,12 @@ namespace EmployeeManagementSystem.Forms
 							//string sql = "DELETE FROM employees WHERE employee_id = '" + EmployeeID + "'";
 							DateTime today = DateTime.Today;
 
-							string sql = "UPDATE employees SET delete_date = @delete_date WHERE employee_id = '" + EmployeeID + "'";
+							string sql = "UPDATE employees SET delete_date = @delete_date WHERE employee_id = @employeeID";
 
 							using (SqlCommand cmd = new SqlCommand(sql, connect.conn))
 							{
 								cmd.Parameters.AddWithValue("@delete_date", today);
-								cmd.Parameters.AddWithValue("@employee_id", EmployeeID);
+								cmd.Parameters.AddWithValue("@employeeID", EmployeeID);
 
 								cmd.ExecuteNonQuery();
 

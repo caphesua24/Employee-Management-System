@@ -43,6 +43,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -50,6 +51,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -191,10 +194,22 @@
 			// panel2
 			// 
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel2.Controls.Add(this.pictureBox4);
 			this.panel2.Location = new System.Drawing.Point(15, 186);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(843, 362);
 			this.panel2.TabIndex = 1;
+			// 
+			// pictureBox4
+			// 
+			this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+			this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox4.Name = "pictureBox4";
+			this.pictureBox4.Size = new System.Drawing.Size(841, 360);
+			this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox4.TabIndex = 0;
+			this.pictureBox4.TabStop = false;
 			// 
 			// Dashboard
 			// 
@@ -214,6 +229,8 @@
 			this.panel5.ResumeLayout(false);
 			this.panel5.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+			this.panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -234,5 +251,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label dashboard_inActE;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.PictureBox pictureBox4;
 	}
 }

@@ -14,6 +14,9 @@ namespace EmployeeManagementSystem
 		public LoginForm()
 		{
 			InitializeComponent();
+
+			login_txbUsername.Text = "admin";
+			login_txbPassword.Text = "123";
 		}
 
 		private void lbExit_Click(object sender, EventArgs e)

@@ -69,7 +69,7 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
-			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
+			this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(43)))));
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -273,8 +273,8 @@
 			// 
 			// panel3
 			// 
-			this.panel3.Controls.Add(this.label8);
 			this.panel3.Controls.Add(this.pictureBox1);
+			this.panel3.Controls.Add(this.label8);
 			this.panel3.Location = new System.Drawing.Point(15, 15);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(840, 50);
@@ -292,13 +292,12 @@
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.ImageLocation = "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Reso" +
-    "urces\\employee-benefit.png";
-			this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(45, 45);
-			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
 			// 
 			// Salary
@@ -339,9 +338,9 @@
 		private System.Windows.Forms.ComboBox salary_cbxGender;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Panel panel3;
-		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.ComboBox salary_cbxPosition;
 		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }

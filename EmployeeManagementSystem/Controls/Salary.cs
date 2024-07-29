@@ -43,9 +43,21 @@ namespace EmployeeManagementSystem.Forms
 			//string loadEmployee = "SELECT * FROM employees";
 			//string loadEmployee = "SELECT id, employee_id, full_name, contact_number, gender, position, salary, image, status, insert_date from employees";
 
-			string loadEmployee = "SELECT employee_id, full_name, contact_number, gender, position, salary FROM employees WHERE delete_date IS NULL";
+			string loadEmployee = "SELECT employee_id, full_name, contact_number, gender, position, salary, status, update_date FROM employees WHERE status = 'Active' AND delete_date IS NULL";
 
 			dataGridView1.DataSource = connect.tb(loadEmployee).DefaultView;
+		}
+
+		//REFRESH DATA WHEN UPDATE
+		public void RefreshData()
+		{
+			if(InvokeRequired)
+			{
+				Invoke((MethodInvoker)RefreshData);
+				return;
+			}
+			LoadEmployees();
+			DisableField();
 		}
 
 		//CLEAR ALL FIELD
@@ -68,6 +80,8 @@ namespace EmployeeManagementSystem.Forms
 			dataGridView1.Columns["contact_number"].HeaderText = "Contact";
 			dataGridView1.Columns["position"].HeaderText = "Position";
 			dataGridView1.Columns["salary"].HeaderText = "Salary";
+			dataGridView1.Columns["status"].HeaderText = "Status";
+			dataGridView1.Columns["update_date"].HeaderText = "UpdateDate";
 		}
 
 		private void salary_btnUpdate_Click(object sender, EventArgs e)

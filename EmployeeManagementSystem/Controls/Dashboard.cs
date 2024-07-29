@@ -28,6 +28,19 @@ namespace EmployeeManagementSystem.Forms
 
 		MessagesCustom messageCus = new MessagesCustom();
 
+		//REFRESH DATA WHEN ADD EMPLOYEE
+		public void RefreshData()
+		{
+			if (InvokeRequired)
+			{
+				Invoke((MethodInvoker)RefreshData);
+				return;
+			}
+			DisplayTotalEmployee();
+			DisplayActiveEmployee();
+			DisplayInactiveEmployee();
+		}
+
 		private void DisplayTotalEmployee()
 		{
 			try

@@ -43,7 +43,7 @@ namespace EmployeeManagementSystem.Forms
 		}
 
 		//SET CUSTOM COLUMN HEADERS
-		private void DatagridviewForm()
+		void DatagridviewForm()
 		{
 			dataGridView1.Columns["id"].HeaderText = "ID";
 			dataGridView1.Columns["employee_id"].HeaderText = "EmployeeID";
@@ -55,6 +55,17 @@ namespace EmployeeManagementSystem.Forms
 			dataGridView1.Columns["salary"].HeaderText = "Salary";
 			dataGridView1.Columns["image"].HeaderText = "Image";
 			dataGridView1.Columns["insert_date"].HeaderText = "InsertDate";
+		}
+
+		//REFRESH DATA WEHN UPDATE
+		public void RefreshData()
+		{
+			if(InvokeRequired)
+			{
+				Invoke((MethodInvoker)RefreshData);
+				return;
+			}
+			LoadEmployees();
 		}
 
 		//CLEAR ALL FILED

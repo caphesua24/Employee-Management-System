@@ -46,6 +46,13 @@ namespace EmployeeManagementSystem.Forms
 			salary1.Visible = false;
 			support1.Visible = false;
 			admin1.Visible = false;
+
+			Dashboard dashboard = dashboard1 as Dashboard;
+
+			if(dashboard != null)
+			{
+				dashboard.RefreshData();
+			}
 		}
 
 		private void main_btnAddEmployee_Click(object sender, EventArgs e)
@@ -55,6 +62,13 @@ namespace EmployeeManagementSystem.Forms
 			salary1.Visible = false;
 			support1.Visible = false;
 			admin1.Visible = false;
+
+			AddEmployee addEmployee = addEmployee1 as AddEmployee;
+
+			if(addEmployee != null)
+			{
+				addEmployee.RefreshData();
+			}
 		}
 
 		private void main_btnSalary_Click(object sender, EventArgs e)
@@ -64,6 +78,13 @@ namespace EmployeeManagementSystem.Forms
 			salary1.Visible = true;
 			support1.Visible = false;
 			admin1.Visible = false;
+
+			Salary salary = salary1 as Salary;
+
+			if(salary != null)
+			{
+				salary.RefreshData();
+			}
 		}
 
 		private void main_btnHelp_Click(object sender, EventArgs e)
@@ -82,6 +103,13 @@ namespace EmployeeManagementSystem.Forms
 			salary1.Visible = false;
 			support1.Visible = false;
 			admin1.Visible = true;
+
+			Admin admin = admin1 as Admin;
+
+			if (admin != null)
+			{
+				admin.RefreshData();
+			}
 		}
 	}
 }

@@ -43,7 +43,6 @@
 			this.addEmployee_cbxGender = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.addEmployee_txbPhone = new System.Windows.Forms.TextBox();
-			this.addEmployee_pictureBox = new System.Windows.Forms.PictureBox();
 			this.addEmployee_btnImport = new System.Windows.Forms.Button();
 			this.addEmployee_btnUpdate = new System.Windows.Forms.Button();
 			this.addEmployee_btnClear = new System.Windows.Forms.Button();
@@ -54,12 +53,13 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.addEmployee_cbxStatus = new System.Windows.Forms.ComboBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.addEmployee_pictureBox = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.addEmployee_pictureBox)).BeginInit();
 			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.addEmployee_pictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -74,6 +74,10 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(43)))));
@@ -84,7 +88,6 @@
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.EnableHeadersVisualStyles = false;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.Name = "dataGridView1";
@@ -110,16 +113,16 @@
 			this.label8.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 			this.label8.Location = new System.Drawing.Point(78, 12);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(202, 25);
+			this.label8.Size = new System.Drawing.Size(178, 25);
 			this.label8.TabIndex = 2;
-			this.label8.Text = "EMPLOYEES DATA";
+			this.label8.Text = "ADD EMPLOYEE";
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.Location = new System.Drawing.Point(3, 2);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(57, 45);
+			this.pictureBox1.Size = new System.Drawing.Size(45, 45);
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -201,16 +204,6 @@
 			this.addEmployee_txbPhone.Name = "addEmployee_txbPhone";
 			this.addEmployee_txbPhone.Size = new System.Drawing.Size(230, 23);
 			this.addEmployee_txbPhone.TabIndex = 5;
-			// 
-			// addEmployee_pictureBox
-			// 
-			this.addEmployee_pictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-			this.addEmployee_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.addEmployee_pictureBox.Location = new System.Drawing.Point(704, 10);
-			this.addEmployee_pictureBox.Name = "addEmployee_pictureBox";
-			this.addEmployee_pictureBox.Size = new System.Drawing.Size(100, 120);
-			this.addEmployee_pictureBox.TabIndex = 8;
-			this.addEmployee_pictureBox.TabStop = false;
 			// 
 			// addEmployee_btnImport
 			// 
@@ -376,6 +369,16 @@
 			this.panel2.Size = new System.Drawing.Size(840, 210);
 			this.panel2.TabIndex = 1;
 			// 
+			// addEmployee_pictureBox
+			// 
+			this.addEmployee_pictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+			this.addEmployee_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.addEmployee_pictureBox.Location = new System.Drawing.Point(704, 10);
+			this.addEmployee_pictureBox.Name = "addEmployee_pictureBox";
+			this.addEmployee_pictureBox.Size = new System.Drawing.Size(100, 120);
+			this.addEmployee_pictureBox.TabIndex = 8;
+			this.addEmployee_pictureBox.TabStop = false;
+			// 
 			// AddEmployee
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,9 +394,9 @@
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.addEmployee_pictureBox)).EndInit();
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.addEmployee_pictureBox)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -404,7 +407,6 @@
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox addEmployee_txbEmployeeID;
 		private System.Windows.Forms.Label label2;
@@ -424,5 +426,6 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.ComboBox addEmployee_cbxStatus;
 		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.DataGridView dataGridView1;
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementSystem.Class;
+using EmployeeManagementSystem.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,15 +18,13 @@ namespace EmployeeManagementSystem.Forms
 		public MainForm()
 		{
 			InitializeComponent();
+
+			lbWelcome.Text = "Welcome, " + Helper.UserName;
 		}
 
 		Connect connect = new Connect();
 
-		private void label1_Click(object sender, EventArgs e)
-		{
-			Application.Exit();
-		}
-
+		//LOG OUT BUTTON
 		private void main_btnLogout_Click(object sender, EventArgs e)
 		{
 			DialogResult check = MessageBox.Show("Are you sure you want to logout ?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -39,6 +38,65 @@ namespace EmployeeManagementSystem.Forms
 			}
 		}
 
+		//SWITCH ADMIN CONTROL TO ADD USER CONTROL
+		public void SwitchAdminToAddUser()
+		{
+			addUser1.Visible = true;
+			dashboard1.Visible = false;
+			addEmployee1.Visible = false;
+			salary1.Visible = false;
+			support1.Visible = false;
+			admin1.Visible = false;
+			employee1.Visible = false;
+
+			Admin admin = admin1 as Admin;
+
+			if(admin != null)
+			{
+				admin.RefreshData();
+			}
+		}
+
+		//SWITCH ADD USER CONTROL TO ADMIN CONTROL
+		public void SwitchAddUserToAdmin()
+		{
+			addUser1.Visible = false;
+			dashboard1.Visible = false;
+			addEmployee1.Visible = false;
+			salary1.Visible = false;
+			support1.Visible = false;
+			admin1.Visible = true;
+			employee1.Visible = false;
+
+			Admin admin = admin1 as Admin;
+
+			if(admin != null)
+			{
+				admin.RefreshData();
+			}
+		}
+
+		//SWITCH EMPLOYEES CONTROL TO ADD EMPLOYEE CONTROL
+		public void SwitchEmployeeToAddEmployee()
+		{
+			addEmployee1.Visible = true;
+
+			addUser1.Visible = false;
+			dashboard1.Visible = false;
+			salary1.Visible = false;
+			support1.Visible = false;
+			admin1.Visible = false;
+			employee1.Visible = false;
+
+			Employee employee = employee1 as Employee;
+
+			if(employee != null)
+			{
+				employee.RefreshData();
+			}
+		}
+		
+		//DASHBOARD BUTTON
 		private void main_btnDashboard_Click(object sender, EventArgs e)
 		{
 			dashboard1.Visible = true;
@@ -46,6 +104,7 @@ namespace EmployeeManagementSystem.Forms
 			salary1.Visible = false;
 			support1.Visible = false;
 			admin1.Visible = false;
+			employee1.Visible = false;
 
 			Dashboard dashboard = dashboard1 as Dashboard;
 
@@ -55,38 +114,51 @@ namespace EmployeeManagementSystem.Forms
 			}
 		}
 
-		private void main_btnAddEmployee_Click(object sender, EventArgs e)
-		{
-			dashboard1.Visible = false;
-			addEmployee1.Visible = true;
-			salary1.Visible = false;
-			support1.Visible = false;
-			admin1.Visible = false;
-
-			AddEmployee addEmployee = addEmployee1 as AddEmployee;
-
-			if(addEmployee != null)
-			{
-				addEmployee.RefreshData();
-			}
-		}
-
-		private void main_btnSalary_Click(object sender, EventArgs e)
+		//EMPLOYEE BUTTON
+		private void main_btnEmployee_Click(object sender, EventArgs e)
 		{
 			dashboard1.Visible = false;
 			addEmployee1.Visible = false;
-			salary1.Visible = true;
+			salary1.Visible = false;
 			support1.Visible = false;
 			admin1.Visible = false;
+			addUser1.Visible = false;
+			employee1.Visible = true;
 
-			Salary salary = salary1 as Salary;
+			Employee employee = employee1 as Employee;
 
-			if(salary != null)
+			if(employee != null)
 			{
-				salary.RefreshData();
+				employee.RefreshData();
 			}
 		}
 
+		//SALARY BUTTON
+		private void main_btnSalary_Click(object sender, EventArgs e)
+		{
+			if (Helper.UserRights == "User")
+			{
+				MessageBox.Show("You don't have permission to open.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			} 
+			else
+			{
+				dashboard1.Visible = false;
+				addEmployee1.Visible = false;
+				salary1.Visible = true;
+				support1.Visible = false;
+				admin1.Visible = false;
+				employee1.Visible = false;
+
+				Salary salary = salary1 as Salary;
+
+				if (salary != null)
+				{
+					salary.RefreshData();
+				}
+			}
+		}
+
+		//HELP BUTTON
 		private void main_btnHelp_Click(object sender, EventArgs e)
 		{
 			dashboard1.Visible = false;
@@ -94,15 +166,19 @@ namespace EmployeeManagementSystem.Forms
 			salary1.Visible = false;
 			support1.Visible = true;
 			admin1.Visible = false;
+			employee1.Visible = false;
 		}
 
+		//ADMIN BUTTON
 		private void main_btnAdmin_Click(object sender, EventArgs e)
-		{
+		{				
 			dashboard1.Visible = false;
 			addEmployee1.Visible = false;
 			salary1.Visible = false;
 			support1.Visible = false;
 			admin1.Visible = true;
+			employee1.Visible = false;
+			addUser1.Visible = false;
 
 			Admin admin = admin1 as Admin;
 
@@ -110,6 +186,12 @@ namespace EmployeeManagementSystem.Forms
 			{
 				admin.RefreshData();
 			}
+		}
+
+		//EXIT BUTTON
+		private void main_btnExit_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }

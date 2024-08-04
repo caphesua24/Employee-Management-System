@@ -48,12 +48,19 @@
   <ItemGroup>
     <Compile Include="Class\Connect.cs" />
     <Compile Include="Class\DoubleBuffered.cs" />
+    <Compile Include="Class\Helper.cs" />
     <Compile Include="Class\MessagesCustom.cs" />
     <Compile Include="Controls\AddEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Admin.cs">
       <SubType>UserControl</SubType>
@@ -66,6 +73,12 @@
     </Compile>
     <Compile Include="Controls\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -102,11 +115,17 @@
     <EmbeddedResource Include="Controls\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -126,11 +145,17 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -168,6 +193,22 @@
     <None Include="Resources\help-desk.png" />
     <None Include="Resources\employees.png" />
     <None Include="Resources\candidates.png" />
+    <Content Include="Assets\add-em.png" />
+    <Content Include="Assets\add.png" />
+    <Content Include="Assets\employee-data.png" />
+    <Content Include="Assets\p1.png" />
+    <Content Include="Assets\p10.png" />
+    <Content Include="Assets\p2.png" />
+    <Content Include="Assets\p3.png" />
+    <Content Include="Assets\p4.png" />
+    <Content Include="Assets\p5.png" />
+    <Content Include="Assets\p6.png" />
+    <Content Include="Assets\p7.png" />
+    <Content Include="Assets\p9.png" />
+    <Content Include="Assets\salary.png" />
+    <Content Include="Assets\technical-support.png" />
+    <Content Include="Assets\users-management.png" />
+    <Content Include="Assets\warning.png" />
     <Content Include="Resources\active_employee.png" />
     <Content Include="Resources\add_image.png" />
     <None Include="Resources\customer-service.png" />

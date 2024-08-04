@@ -48,8 +48,8 @@
 			this.salary_txbEmployeeID = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
-			this.label8 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label8 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -69,6 +69,10 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(43)))));
@@ -79,7 +83,6 @@
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.EnableHeadersVisualStyles = false;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.Name = "dataGridView1";
@@ -280,6 +283,16 @@
 			this.panel3.Size = new System.Drawing.Size(840, 50);
 			this.panel3.TabIndex = 2;
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(45, 50);
+			this.pictureBox1.TabIndex = 3;
+			this.pictureBox1.TabStop = false;
+			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
@@ -289,16 +302,6 @@
 			this.label8.Size = new System.Drawing.Size(94, 25);
 			this.label8.TabIndex = 2;
 			this.label8.Text = "SALARY";
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-			this.pictureBox1.TabIndex = 3;
-			this.pictureBox1.TabStop = false;
 			// 
 			// Salary
 			// 

@@ -258,10 +258,10 @@ namespace EmployeeManagementSystem.Forms
 		//DELETE BUTTON
 		private void addEmployee_btnDelete_Click(object sender, EventArgs e)
 		{
-			DialogResult result = MessageBox.Show("Are you sure you want to UPDATE ?", "Confirmation Message", 
+			DialogResult result = MessageBox.Show("Are you sure you want to DELETE ?", "Confirmation Message",
 				MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-			if(result == DialogResult.Yes)
+			if (result == DialogResult.Yes)
 			{
 				if (addEmployee_txbEmployeeID.Text == "")
 				{
@@ -273,7 +273,7 @@ namespace EmployeeManagementSystem.Forms
 					{
 						connect.OpenConnection();
 
-						string EmployeeID = addEmployee_txbEmployeeID.Text.Trim();	
+						string EmployeeID = addEmployee_txbEmployeeID.Text.Trim();
 
 						string checkID = "SELECT * FROM employees WHERE employee_id = '" + EmployeeID + "' AND delete_date IS NULL";
 

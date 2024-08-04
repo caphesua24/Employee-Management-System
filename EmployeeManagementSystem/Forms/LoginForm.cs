@@ -59,17 +59,41 @@ namespace EmployeeManagementSystem
 						DataTable tb = new DataTable();
 						adapter.Fill(tb);
 
-						if (tb.Rows.Count > 0)
-						{
-							MessageBox.Show("Login Successfully.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						//GET USER RIGHTS
+						string userRights = tb.Rows[0]["Rights"].ToString();
 
-							MainForm mainForm = new MainForm();
-							mainForm.Show();
-							this.Hide();
+						//GET STATUS
+						string status = tb.Rows[0]["status"].ToString();
+
+						//GET USER NAME
+						string userName = tb.Rows[0]["username"].ToString();
+
+						if(status == "Inactive")
+						{
+							MessageBox.Show("Your account is INACTIVE.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 						}
 						else
 						{
-							MessageBox.Show("Incorrect Username or Password.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+							if (tb.Rows.Count > 0)
+							{
+								MessageBox.Show("Login Successfully.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+								Helper.UserRights = userRights;
+
+								Helper.UserName = userName;
+
+								MainForm mainForm = new MainForm();
+								mainForm.Show();
+								this.Hide();
+
+								
+
+								//MessageBox.Show(userName);
+							}
+							else
+							{
+								MessageBox.Show("Incorrect Username or Password.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+							}
 						}
 					}
 				}

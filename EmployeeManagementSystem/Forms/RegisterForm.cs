@@ -15,6 +15,7 @@ namespace EmployeeManagementSystem.Forms
 	public partial class RegisterForm : Form
 	{
 		Connect connect = new Connect();
+		Encryption encryption = new Encryption();
 
 		public RegisterForm()
 		{
@@ -46,6 +47,10 @@ namespace EmployeeManagementSystem.Forms
 
 		private void register_btnSignup_Click(object sender, EventArgs e)
 		{
+			string hashPassword = register_txbPassword.Text;
+
+			hashPassword = encryption.EndcodeSHA256(hashPassword);
+
 			if(register_txbUsername.Text == "" || register_txbPassword.Text == "")
 			{
 				MessageBox.Show("Please fill all the required fields.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -78,7 +83,7 @@ namespace EmployeeManagementSystem.Forms
 							using(SqlCommand cmd = new SqlCommand(query, connect.conn))
 							{
 								cmd.Parameters.AddWithValue("@username", register_txbUsername.Text.Trim());
-								cmd.Parameters.AddWithValue("@password", register_txbPassword.Text.Trim());
+								cmd.Parameters.AddWithValue("@password",hashPassword);
 								cmd.Parameters.AddWithValue("@date_register", date_register);
 
 								cmd.ExecuteNonQuery();

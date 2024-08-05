@@ -18,6 +18,7 @@ namespace EmployeeManagementSystem.Class
 		SqlDataAdapter da;
 		DataTable dt;
 		SqlCommand cmd;
+		
 
 		//open connect
 		public void OpenConnection()

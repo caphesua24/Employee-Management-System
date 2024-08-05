@@ -21,6 +21,8 @@ namespace EmployeeManagementSystem.Controls
 
 		MessagesCustom messages = new MessagesCustom();
 
+		Encryption Encryption = new Encryption();	
+
 		public AddUser()
 		{
 			InitializeComponent();
@@ -113,6 +115,8 @@ namespace EmployeeManagementSystem.Controls
 		//ADD USER BUTTON
 		private void addUser_btnAdd_Click(object sender, EventArgs e)
 		{
+			string hashPassword = Encryption.EndcodeSHA256(addUser_txbPassword.Text.Trim());
+
 			if (addUser_txbUsername.Text == "" ||
 				addUser_txbPassword.Text == "" || addUser_cbxRights.Text == "" ||
 				addUser_cbxPosition.Text == "" || addUser_cbxStatus.Text == "")
@@ -132,7 +136,7 @@ namespace EmployeeManagementSystem.Controls
 					using (SqlCommand cmd = new SqlCommand(query, connect.conn))
 					{
 						cmd.Parameters.AddWithValue("@name", addUser_txbUsername.Text.Trim());
-						cmd.Parameters.AddWithValue("@password", addUser_txbPassword.Text.Trim());
+						cmd.Parameters.AddWithValue("@password", hashPassword);
 						cmd.Parameters.AddWithValue("@status", addUser_cbxStatus.Text.Trim());
 						cmd.Parameters.AddWithValue("@rights", addUser_cbxRights.Text.Trim());
 						cmd.Parameters.AddWithValue("@position", addUser_cbxPosition.Text.Trim());

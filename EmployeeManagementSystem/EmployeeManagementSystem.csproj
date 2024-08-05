@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Class\Connect.cs" />
     <Compile Include="Class\DoubleBuffered.cs" />
+    <Compile Include="Class\Encryption.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="Class\MessagesCustom.cs" />
     <Compile Include="Controls\AddEmployee.cs">

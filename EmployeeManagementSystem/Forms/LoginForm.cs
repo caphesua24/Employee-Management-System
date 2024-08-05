@@ -11,6 +11,8 @@ namespace EmployeeManagementSystem
 	{
 		Connect connect = new Connect();
 
+		Encryption encryption = new Encryption();
+
 		public LoginForm()
 		{
 			InitializeComponent();
@@ -26,9 +28,11 @@ namespace EmployeeManagementSystem
 
 		private void login_btnSignup_Click(object sender, EventArgs e)
 		{
-			RegisterForm resForm = new RegisterForm();
+			MessageBox.Show("You don't have permission to SIGNUP.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+			/*RegisterForm resForm = new RegisterForm();
 			resForm.Show();
-			this.Hide();
+			this.Hide();*/
 		}
 
 		private void login_chboxShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -36,9 +40,13 @@ namespace EmployeeManagementSystem
 			login_txbPassword.PasswordChar = login_chboxShowPassword.Checked ? '\0' : '*';
 		}
 
+		//LOGIN BUTTON
 		private void login_btnLogin_Click(object sender, EventArgs e)
 		{
-			if(login_txbUsername.Text == "" || login_txbPassword.Text == "")
+			string password = login_txbPassword.Text;
+			string hashPassword = encryption.EndcodeSHA256(password);
+
+			if (login_txbUsername.Text == "" || login_txbPassword.Text == "")
 			{
 				MessageBox.Show("Please fill all the required field.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
@@ -48,12 +56,12 @@ namespace EmployeeManagementSystem
 				{
 					connect.OpenConnection();
 
-					string query = "SELECT * FROM users WHERE username = @username AND password = @password";
+					string query = "SELECT * FROM users WHERE username = @username AND password = '" + hashPassword + "'";
 
 					using(SqlCommand cmd = new SqlCommand(query, connect.conn))
 					{
 						cmd.Parameters.AddWithValue("@username", login_txbUsername.Text.Trim());
-						cmd.Parameters.AddWithValue("@password", login_txbPassword.Text.Trim());
+						cmd.Parameters.AddWithValue("@password", hashPassword);
 
 						SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 						DataTable tb = new DataTable();
@@ -85,10 +93,6 @@ namespace EmployeeManagementSystem
 								MainForm mainForm = new MainForm();
 								mainForm.Show();
 								this.Hide();
-
-								
-
-								//MessageBox.Show(userName);
 							}
 							else
 							{

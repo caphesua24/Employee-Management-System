@@ -169,9 +169,10 @@ namespace EmployeeManagementSystem.Forms
 				AddUser addUser = new AddUser();
 				addUser.Visible = true;
 				this.Visible = false;
+				//Call method from MainForm to display AddUserControl
+				(this.Parent as MainForm)?.SwitchAdminToAddUser();
 			}
-			//Call method from MainForm to display AddUserControl
-			(this.Parent as MainForm)?.SwitchAdminToAddUser();
+			
 		}
 	}
 }

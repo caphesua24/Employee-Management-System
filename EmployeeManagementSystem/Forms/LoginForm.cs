@@ -76,6 +76,7 @@ namespace EmployeeManagementSystem
 						//GET USER NAME
 						string userName = tb.Rows[0]["username"].ToString();
 
+						//CANNOT LOGIN WITH INACTIVE ACCOUNT
 						if(status == "Inactive")
 						{
 							MessageBox.Show("Your account is INACTIVE.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);

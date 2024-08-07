@@ -17,3 +17,7 @@ C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj
 C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Forms.Admin.resources
 C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Controls.AddUser.resources
 C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.Controls.Employee.resources
+C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.exe.manifest
+C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\EmployeeManagementSystem.application
+C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.exe.manifest
+C:\Users\ASUS\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\EmployeeManagementSystem.application

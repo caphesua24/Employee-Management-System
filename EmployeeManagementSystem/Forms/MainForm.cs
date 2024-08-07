@@ -80,7 +80,6 @@ namespace EmployeeManagementSystem.Forms
 		public void SwitchEmployeeToAddEmployee()
 		{
 			addEmployee1.Visible = true;
-
 			addUser1.Visible = false;
 			dashboard1.Visible = false;
 			salary1.Visible = false;
@@ -105,6 +104,7 @@ namespace EmployeeManagementSystem.Forms
 			support1.Visible = false;
 			admin1.Visible = false;
 			employee1.Visible = false;
+			addUser1.Visible = false;	
 
 			Dashboard dashboard = dashboard1 as Dashboard;
 
@@ -148,6 +148,7 @@ namespace EmployeeManagementSystem.Forms
 				support1.Visible = false;
 				admin1.Visible = false;
 				employee1.Visible = false;
+				addUser1.Visible = false;
 
 				Salary salary = salary1 as Salary;
 
@@ -167,6 +168,7 @@ namespace EmployeeManagementSystem.Forms
 			support1.Visible = true;
 			admin1.Visible = false;
 			employee1.Visible = false;
+			addUser1.Visible = false;
 		}
 
 		//ADMIN BUTTON

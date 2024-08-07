@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\employeemanagementsystem\\controls\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controls\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\asus\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\asus\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\employeemanagementsystem\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\asus\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\asus\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\controls\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controls\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9067AA39-E539-4AE2-B9A9-CC9B4505D084}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\employeemanagementsystem\\controls\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,8 +34,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Forms\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Forms\\MainForm.Designer.cs",
+              "ViewState": "AQIAANgAAAAAAAAAAAASwMYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T06:34:58.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "EmployeeManagementSystem\\Forms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T06:32:53.521Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -36,14 +69,14 @@
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Forms\\MainForm.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Forms\\MainForm.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Forms\\MainForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T04:41:54.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AddUser.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controls\\AddUser.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controls\\AddUser.cs",
@@ -51,25 +84,24 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controls\\AddUser.cs",
               "ViewState": "AQIAAJgAAAAAAAAAAAAuwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T07:29:55.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T07:29:55.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controls\\Admin.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controls\\Admin.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controls\\Admin.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Controls\\Admin.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAqwKAAAAA9AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAiwKAAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-03T20:04:16.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controls\\Employee.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controls\\Employee.cs",

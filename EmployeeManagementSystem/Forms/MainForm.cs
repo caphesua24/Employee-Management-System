@@ -23,21 +23,7 @@ namespace EmployeeManagementSystem.Forms
 		}
 
 		Connect connect = new Connect();
-
-		//LOG OUT BUTTON
-		private void main_btnLogout_Click(object sender, EventArgs e)
-		{
-			DialogResult check = MessageBox.Show("Are you sure you want to logout ?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-			if (check == DialogResult.Yes)
-			{
-				LoginForm loginForm = new LoginForm();
-				loginForm.Show();
-				this.Hide();
-
-			}
-		}
-
+		
 		//SWITCH ADMIN CONTROL TO ADD USER CONTROL
 		public void SwitchAdminToAddUser()
 		{
@@ -194,6 +180,19 @@ namespace EmployeeManagementSystem.Forms
 		private void main_btnExit_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
+		}
+
+		//LOG OUT BUTTON
+		private void btn_Logout_Click(object sender, EventArgs e)
+		{
+			DialogResult check = MessageBox.Show("Are you sure you want to logout ?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+			if (check == DialogResult.Yes)
+			{
+				LoginForm loginForm = new LoginForm();
+				loginForm.Show();
+				this.Hide();
+			}
 		}
 	}
 }
